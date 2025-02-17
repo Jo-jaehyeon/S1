@@ -65,7 +65,8 @@
 # Precompiled Assets
 SourceArt/**/*.png
 SourceArt/**/*.tga
-Content/Assets/
+Content/Characters
+Content/LevelPrototyping
 
 # Binary Files
 Binaries/*
