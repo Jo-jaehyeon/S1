@@ -22,12 +22,16 @@ protected:
 
 public:
 	bool IsMyPlayer();
+	Protocol::MoveState GetMoveState() { return PlayerInfo->state(); }
+	void SetMoveState(Protocol::MoveState State);
 
 public:
 	void SetPlayerInfo(const Protocol::PlayerInfo& Info);
+	void SetDestInfo(const Protocol::PlayerInfo& Info);
 	Protocol::PlayerInfo* GetPlayerInfo() { return PlayerInfo; }
 
 protected:
 	class Protocol::PlayerInfo* PlayerInfo; //현재 위치
+	class Protocol::PlayerInfo* DestInfo;	//목적지 위치
 };
 
